@@ -18,3 +18,8 @@ for six UML relationships.
 ## Language
 
 Python
+
+## EXER 2 REFLECTION
+# Reflection: Why is it better to access __age through get_age()?
+  Using get_age() protects the data from accidental changes outside the class.
+  It also lets us control how the age is viewed or add validation rules later.
