@@ -1,15 +1,21 @@
 class Person:
+
   def __init__(self, name, age):
     self.name = name
-    self.age = age
+    self.__age = age  
+
+  def get_age(self):
+    return self.__age
 
   def display_info(self):
     print(f"Name: {self.name}")
-    print(f"Age:{self.age}")
+    print(f"Age: {self.get_age()}")
 
 
-# Instantiate the object person1
 person1 = Person("Lina", 20)
 
-# Display the information
 person1.display_info()
+
+# Reflection: Why is it better to access __age through get_age()?
+# Using get_age() protects the data from accidental changes outside the class.
+# It also lets us control how the age is viewed or add validation rules later.
