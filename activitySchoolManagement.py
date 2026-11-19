@@ -1,3 +1,4 @@
+# Parent Class
 class Person:
 
   def __init__(self, name, age):
@@ -12,10 +13,14 @@ class Person:
     print(f"Age: {self.get_age()}")
 
 
-person1 = Person("Lina", 20)
+# Child Class inheriting from Person
+class Student(Person):
 
-person1.display_info()
+  def study(self):
+    print(f"{self.name} is studying")
 
-# Reflection: Why is it better to access __age through get_age()?
-# Using get_age() protects the data from accidental changes outside the class.
-# It also lets us control how the age is viewed or add validation rules later.
+
+student1 = Student("Lina", 20)
+
+student1.display_info()
+student1.study()
