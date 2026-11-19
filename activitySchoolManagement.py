@@ -1,26 +1,15 @@
-# Parent Class
 class Person:
-
   def __init__(self, name, age):
     self.name = name
-    self.__age = age  
-
-  def get_age(self):
-    return self.__age
+    self.age = age
 
   def display_info(self):
     print(f"Name: {self.name}")
-    print(f"Age: {self.get_age()}")
+    print(f"Age:{self.age}")
 
 
-# Child Class inheriting from Person
-class Student(Person):
+# Instantiate the object person1
+person1 = Person("Lina", 20)
 
-  def study(self):
-    print(f"{self.name} is studying")
-
-
-student1 = Student("Lina", 20)
-
-student1.display_info()
-student1.study()
+# Display the information
+person1.display_info()
